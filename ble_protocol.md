@@ -4,9 +4,6 @@
 
 This document describes the TrueGear SDK Bluetooth communication protocol, covering the complete flow from device connection to effect data transmission. The protocol is based on BLE, using GATT services for data transmission.
 
-### Core Components
-- **BluetoothLeConnectionService**: Connection management, scanning, data sending
-- **EffectObjectWriter**: Effect frame construction, device index mapping
 
 ### Protocol Characteristics
 - **Transmission**: BLE Write Without Response
@@ -21,8 +18,6 @@ This document describes the TrueGear SDK Bluetooth communication protocol, cover
 ### State Machine
 ```
 Scanning → Connecting → Connected → Service Discovery → Ready
-   ↓        ↓        ↓        ↓        ↓
-   Filter devices → GATT connection → State callback → Characteristic lookup → Send loop
 ```
 
 ### Key Steps
